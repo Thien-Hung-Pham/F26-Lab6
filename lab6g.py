@@ -1,12 +1,38 @@
 # Add comments before you do anything else.
 
 #!/usr/bin/env python3
-# Author:
-# Date:
+# Author: Thien Hung Pham
+# Date: 11/05/2026
 # Purpose: Use Dictionary for Structured Data.
 # Usage: ./lab6g.py
 
 # TO DO 1: Create function add_movie(). 
+
+database = []
+
+def add_movie(name, director, year, runtime):
+    movie = {
+        "name": name,
+        "director": director,
+        "year": year,
+        "runtime": runtime
+    }
+
+    database.append(movie)
+
+
+def main():
+    add_movie("Inception", "Christopher Nolan", 2010, 148)
+    add_movie("Interstellar", "Christopher Nolan", 2014, 169)
+    add_movie("The Matrix", "Lana Wachowski", 1999, 136)
+    add_movie("Parasite", "Bong Joon-ho", 2019, 132)
+
+    for movie in database:
+        print(f"{movie['name']} | {movie['director']} | {movie['year']} | {movie['runtime']} minutes")
+
+
+main()    
+
 # TO DO 2: Call the function 4 times.
 # TO DO 3: Print the database as instructed in readme.md file.
 # TO DO 4: Run the script. Take screenshot of code and script.
