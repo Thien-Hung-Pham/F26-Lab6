@@ -11,7 +11,7 @@ def s3_and_s5_not_s7():
     s3 = buildtheSet(3)
     s5 = buildtheSet(5)
     s7 = buildtheSet(7)
-    return (s3 | s5) - s7
+    return (s3.union(s5)) - s7
 
 def buildtheSet(divisor):
     set = {0}
@@ -32,7 +32,7 @@ def main():
     print("----------------------------------------")
 
     s7 = buildtheSet(7)
-    print("s5: ", s5)
+    print("s7: ", s7)
     print("----------------------------------------")
 
     s3oands5nots7 = s3_and_s5_not_s7()

@@ -18,7 +18,8 @@ def main():
     my_dictionary = multiplyByTen(2,6)
     print(my_dictionary)
 
-main()
+if __name__ == "__main__":
+    main()
     
 
 # TO DO 2: Run the script.

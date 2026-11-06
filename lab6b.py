@@ -10,7 +10,15 @@
 def s3_or_s5():
     s3 = buildtheSet(3)
     s5 = buildtheSet(5)
-    return s3 ^ s5
+
+    # Other method: I can use XOR (return s3 ^ s5) to achieve the same thing  
+
+
+    just_s3 = s3 - s5
+    just_s5 = s5 - s3
+
+
+    return just_s3.union(just_s5) 
 
 # TO DO 1: Copy the code from lab6a.py and paste here.
 def buildtheSet(divisor):

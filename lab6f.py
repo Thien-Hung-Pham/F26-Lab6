@@ -7,12 +7,13 @@
 # Usage: ./lab5f.py
 
 # TO DO 1: Create function histogram() as instructed in readme.md file. 
-# TO DO 2: Create main() function and call histogram(). Call the main() function.
-
 def histogram(string):
     char_count = {}
 
     for char in string:
+        if char == " ":
+            continue
+
         if char not in char_count:
             char_count[char] = 1
         else:
@@ -23,12 +24,12 @@ def histogram(string):
         print(f"{char} {val}")
 
 
+# TO DO 2: Create main() function and call histogram(). Call the main() function.
 def main():
-    string ="hello"
+    string ="hello professor Bashir!"
     histogram(string)    
 
-
-
-main()
+if __name__ == "__main__":
+    main()
 
 # TO DO 3: Run the script. Take screenshot of code showing the functions histogram() and main(). Also show output in the screenshot.

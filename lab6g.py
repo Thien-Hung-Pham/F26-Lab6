@@ -8,9 +8,8 @@
 
 # TO DO 1: Create function add_movie(). 
 
-database = []
 
-def add_movie(name, director, year, runtime):
+def add_movie(database, name = "Unknown Movie", director = "Unknown Director", year = 0, runtime = 0):
     movie = {
         "name": name,
         "director": director,
@@ -22,17 +21,18 @@ def add_movie(name, director, year, runtime):
 
 
 def main():
-    add_movie("Inception", "Christopher Nolan", 2010, 148)
-    add_movie("Interstellar", "Christopher Nolan", 2014, 169)
-    add_movie("The Matrix", "Lana Wachowski", 1999, 136)
-    add_movie("Parasite", "Bong Joon-ho", 2019, 132)
+    database = []
+    # TO DO 2: Call the function 4 times.
+    add_movie(database, "Inception", "Christopher Nolan", 2010, 148)
+    add_movie(database, "Interstellar", "Christopher Nolan", 2014, 169)
+    add_movie(database, "The Matrix", "Lana Wachowski", 1999, 136)
+    add_movie(database, "Parasite", "Bong Joon-ho", 2019, 132)
 
+    # TO DO 3: Print the database as instructed in readme.md file.
     for movie in database:
         print(f"{movie['name']} | {movie['director']} | {movie['year']} | {movie['runtime']} minutes")
 
 
 main()    
 
-# TO DO 2: Call the function 4 times.
-# TO DO 3: Print the database as instructed in readme.md file.
 # TO DO 4: Run the script. Take screenshot of code and script.
